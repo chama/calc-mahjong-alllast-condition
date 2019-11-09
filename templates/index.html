@@ -9,65 +9,93 @@
 {% endblock %}
 
 {% block content %}
-<div class="form-group">
-    <label for="my-score">
-        自分の点数
-    </label>
-    <input type="text" class="form-control" id="my_point" placeholder="自分の持ち点を入力">
-</div>
-<div class="form-group">
-        <label for="enemy-score">
-            相手の点数
+
+<p>{{ message }}</p>
+
+<form method="post" action="/">
+    <div class="form-group">
+        <label for="my-score">
+            自分の点数
         </label>
-        <input type="text" class="form-control" id="ene_point" placeholder="相手の持ち点を入力">
+        <input type="text" name="my_point" class="form-control" id="my_point" placeholder="自分の持ち点を入力">
     </div>
-<div class="form-group">
-    <div class="">１本場</div>
-    <div class="m-1 btn-group btn-group-toggle" data-toggle="buttons">
-        <label for="" class="btn btn-light active">
-            <input type="radio" name="options" id="300"> 300
-        </label>
-        <label for="" class="btn btn-light">
-            <input type="radio" name="options" id="1500"> 1500
-        </label>
+    <div class="form-group">
+            <label for="enemy-score">
+                相手の点数
+            </label>
+            <input type="text" name="en_point" class="form-control" id="en_point" placeholder="相手の持ち点を入力">
+        </div>
+
+    <div class="form-group">
+        <label for="kyoutaku">供託</label>
+        <select name="kyoutaku" id="kyoutaku" class="form-control">
+            <option value="0">0</option>
+            <option value="1000">1000</option>
+            <option value="2000">2000</option>
+            <option value="3000">3000</option>
+            <option value="4000">4000</option>
+            <option value="5000">5000</option>
+            <option value="6000">6000</option>
+            <option value="7000">7000</option>
+            <option value="8000">8000</option>
+            <option value="9000">9000</option>
+            <option value="10000">10000</option>
+            <option value="11000">11000</option>
+            <option value="12000">12000</option>
+            <option value="13000">13000</option>
+            <option value="14000">14000</option>
+            <option value="15000">15000</option>
+            <option value="16000">16000</option>
+            <option value="17000">17000</option>
+            <option value="18000">18000</option>
+            <option value="19000">19000</option>
+            <option value="20000">20000</option>
+        </select>
     </div>
-</div>
-<div class="form-group">
-    <label for="tumibou">積み棒</label>
-    <select id="tumibou" class="form-control">
-        <option value="">0</option>
-        <option value="">1</option>
-        <option value="">2</option>
-        <option value="">3</option>
-        <option value="">4</option>
-        <option value="">5</option>
-        <option value="">6</option>
-        <option value="">7</option>
-        <option value="">8</option>
-        <option value="">9</option>
-        <option value="">10</option>
-        <option value="">11</option>
-        <option value="">12</option>
-        <option value="">13</option>
-        <option value="">14</option>
-        <option value="">15</option>
-        <option value="">16</option>
-        <option value="">17</option>
-        <option value="">18</option>
-        <option value="">19</option>
-        <option value="">20</option>
-    </select>
-</div>
-<div class="form-group">
-    <input type="submit" class="form-control btn btn-primary" value="計算">
-</div>
-<div class="">
-    出和了
-    自摸
-    直撃
-</div>
+    
+    <div class="form-group">
+        <div class="">１本場</div>
+        <div class="m-1 btn-group btn-group-toggle" data-toggle="buttons">
+            <label for="" class="btn btn-light active">
+                <input type="radio" name="honba" id="t300" value="300" checked> 300
+            </label>
+            <label for="" class="btn btn-light">
+                <input type="radio" name="honba" id="t1500" value="1500"> 1500
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="tumibou">積み棒</label>
+        <select name="tumibou" id="tumibou" class="form-control">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="form-control btn btn-primary" value="計算">
+    </div>
+</form>
 {% endblock %}
 
 {% block footer %}
-&copy; 2019 Chama
+&copy;2019 Chama
 {% endblock %}
