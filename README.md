@@ -1,0 +1,1 @@
+# calc-mahjong-alllast-condition
